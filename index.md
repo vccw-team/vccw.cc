@@ -175,6 +175,8 @@ This Vagrant configuration has many customizable constants.
 * `WP_LANG = ""`
     * Select the [locale](http://svn.automattic.com/wordpress-i18n/) you want to download (e.g. `ja`)
     * If you see any error, use `""`.
+  `DOCUMENT_ROOT = "/var/www/wordpress"`
+    * The document root directory.
 * `WP_HOSTNAME = "wordpress.local"`
     * Select the hostname for the Guest OS (e.g. `exmaple.com`, `digitalcube.jp` etc.)
 * `WP_HOME              = "" # path to WP_HOME, e.g blank or /wp or ...`
@@ -472,7 +474,21 @@ $ rake spec
 
 ## Changelog
 
+### 1.9.7
+
+<i class="fa fa-wrench"></i> [1.9.6...1.9.7](https://github.com/miya0001/vccw/compare/1.9.6...1.9.7)
+
+* Add a constant `DOCUMENT_ROOT`.
+* Move cookbooks directory into the `provision/`.
+* Some fix.
+
+### 1.9.6
+
+<i class="fa fa-wrench"></i> [1.9.5...1.9.6](https://github.com/miya0001/vccw/compare/1.9.5...1.9.6)
+
 ### 1.9.5
+
+<i class="fa fa-wrench"></i> [1.9.0...1.9.5](https://github.com/miya0001/vccw/compare/1.9.0...1.9.5)
 
 * Add lftp and some fix.
 * Update box miya0001/vccw. Please run `vagrant box update`.
