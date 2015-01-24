@@ -12,62 +12,6 @@ This is a [Vagrant](http://www.vagrantup.com/) configuration designed for develo
 
 <ul id="navmenu"></ul>
 
-## Overview
-
-* This Vagrant configuration has various settings you can change:
-     * Multisite
-     * Force SSL Admin
-     * Subdirectory installation (e.g. `http://wordpress.local/wp/`)
-* Customizable URL (default: `http://wordpress.local/`)
-* Debug mode is enabled by default
-* SSL is enabled by default
-* Automatic installation & activation of plugins and themes at the time of provisioning:
-     * default plugins: theme-check, plugin-check, dynamic-hostname
-     * default theme: none
-* Optional import of theme unit test data
-* Pre-installed tools
-    * [WP-CLI](http://wp-cli.org)
-        * [Dictator](https://github.com/danielbachhuber/dictator)
-    * [Grunt](http://gruntjs.com/)
-    * [Composer](https://getcomposer.org/)
-    * [WordPress i18n Tools](http://i18n.svn.wordpress.org/tools/trunk/)
-    * [PHPUnit](http://phpunit.de/)
-        * [WordPress Unit Tests](http://develop.svn.wordpress.org/trunk/tests/phpunit/)
-    * [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
-        * [WordPress Coding Standards for PHP_CodeSniffer](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards)
-    * [WordMove](https://github.com/welaika/wordmove)
-* Shares folders between Host and Guest OS
-
-### It is very easy to switch your WordPress environments.
-
-It is enabled to switch theme.
-
-```
-$ wp_theme=http://example.com/path/to/your-theme.zip vagrant provision
-```
-
-WordPress version.
-
-```
-$ wp_version=3.5.2 vagrant provision
-```
-
-Languages.
-
-```
-$ wp_lang=ja vagrant provision
-```
-
-So, switching back is easy too.
-
-```
-$ vagrant provision
-```
-
-
-{{ site.scroll_to_top }}
-
-
 ## Getting Started
 
 ### 1. Install VirtualBox.
@@ -93,31 +37,19 @@ Windows is not allow to change hosts-file. Please add 'wordpress.local 192.168.3
 
 <br clear="all" />
 
-or
-
-```
-$ git clone git@github.com:miya0001/vccw.git
-```
-
 ### 5. Change into a new directory.
 
 ```
-$ cd vccw
+$ cd vccw-x.x.x
 ```
 
-### 6. Copy the default Vagrantfile.
-
-```
-$ cp Vagrantfile.sample Vagrantfile
-```
-
-### 7. Start a Vagrant environment.
+### 6. Start a Vagrant environment.
 
 ```
 $ vagrant up
 ```
 
-### 8. Visit WordPress on the Vagrant in your browser
+### 7. Visit WordPress on the Vagrant in your browser
 
 Visit [http://wordpress.local/](http://wordpress.local/) or [http://192.168.33.10/](http://192.168.33.10/)
 
@@ -227,12 +159,12 @@ This Vagrant configuration has many customizable constants.
 
 You can place shell scripts, so it will run at pre/post provisioning.
 
-* `provision/provision-pre.sh` - Run before chef provisioning.
-* `provision/provision-post.sh` - Run after chef provisioning.
+* `provision-pre.sh` - Run before chef provisioning.
+* `provision-post.sh` - Run after chef provisioning.
 
 ### Example shell script.
 
-`provision/provision-post.sh` - It will run after provisioning.
+`provision-post.sh` - It will run after provisioning.
 
 ```
 #!/usr/bin/env bash
@@ -246,45 +178,6 @@ cd /var/www/wordpress
 This example script will import `/vagrant/import.sql` to the MySQL database by WP-CLI.
 
 {{ site.scroll_to_top }}
-
-## For theme reviewers
-
-You can have a clean and appropriate theme review environment very easily.
-
-* the theme activated
-* needed plugins activated ( theme-check debogger log-deprecated-notices monster-widget wordpress-beta-tester regenerate-thumbnails )
-* long blogname & blogdescription set
-* posts_per_page set to 5
-* thread_comments set to 1
-* thread_comments_depth set to 3
-* page_comments set to 1
-* comments_per_page to 5
-* large_size_w & large_size_h set to '' (empty)
-* rewrite structure '/%year%/%monthnum%/%postname%' with .htaccess generated
-
-### 1. Go to vccw directory
-
-```
-$ cd vccw
-```
-
-### 2. Copy the Vagrantfile.theme-review
-
-```
-$ cp Vagrantfile.theme-review Vagrantfile
-```
-
-### 3. Specify the theme's zip file url and vagrant up
-
-```
-$ wp_theme=http://example.com/path/to/zipped/theme/file.zip vagrant up
-```
-
-or
-
-```
-$ wp_theme=http://example.com/path/to/zipped/theme/file.zip vagrant provision
-```
 
 ## WP-CLI
 
@@ -456,15 +349,6 @@ Pushes WP data from local machine to remote host
 
 ## How to run serverspec
 
-`vagrant up` with vagrant-serverspec plugin.
-
-```
-$ vagrant plugin install vagrant-serverspec
-$ VAGRANT_VAGRANTFILE=Vagrantfile.sample vagrant up
-```
-
-Or use `rake`.
-
 ```
 $ bundle install
 $ rake spec
@@ -474,95 +358,6 @@ $ rake spec
 
 ## Changelog
 
-### 1.9.7
-
-<i class="fa fa-wrench"></i> [1.9.6...1.9.7](https://github.com/miya0001/vccw/compare/1.9.6...1.9.7)
-
-* Add a constant `DOCUMENT_ROOT`.
-* Move cookbooks directory into the `provision/`.
-* Some fix.
-
-### 1.9.6
-
-<i class="fa fa-wrench"></i> [1.9.5...1.9.6](https://github.com/miya0001/vccw/compare/1.9.5...1.9.6)
-
-### 1.9.5
-
-<i class="fa fa-wrench"></i> [1.9.0...1.9.5](https://github.com/miya0001/vccw/compare/1.9.0...1.9.5)
-
-* Add lftp and some fix.
-* Update box miya0001/vccw. Please run `vagrant box update`.
-
-### 1.9.0
-
-<i class="fa fa-wrench"></i> [1.8.1...1.9.0](https://github.com/miya0001/vccw/compare/1.8.1...1.9.0)
-
-* Add features running scripts at pre/post provisioning.
-
-### 1.8.0
-
-<i class="fa fa-wrench"></i> [1.7.1...1.8.0](https://github.com/miya0001/vccw/compare/1.7.1...1.8.0)
-
-### 1.7.1
-
-<i class="fa fa-wrench"></i> [1.7.0...1.7.1](https://github.com/miya0001/vccw/compare/1.7.0...1.7.1)
-
-* Add template .htaccess
-
-### 1.7
-
-<i class="fa fa-wrench"></i> [1.6.0...1.7.0](https://github.com/miya0001/vccw/compare/1.6.0...1.7.0)
-
-* Add dictator.
-* Add environment variables for switching WordPress.
-* Add Vagrantfile.theme-review
-
-### 1.6
-
-<i class="fa fa-wrench"></i> [1.5.0...1.6.0](https://github.com/miya0001/vccw/compare/1.5.0...1.6.0)
-
-* Change cookbook name `wp-cli` to `wpcli`
-* It's become to sync with latest wp-cli when vagrant provision.
-
-### 1.5
-
-<i class="fa fa-wrench"></i> [1.4...1.5.0](https://github.com/miya0001/vccw/compare/1.4...1.5.0)
-
-* Add serverspec testing.
-* Some fix
-
-### 1.4
-
-<i class="fa fa-wrench"></i> [1.3...1.4](https://github.com/miya0001/vccw/compare/1.3...1.4)
-
-* Add WordMove.
-* Some fix.
-
-### 1.3
-
-<i class="fa fa-wrench"></i> [1.2...1.3](https://github.com/miya0001/vccw/compare/1.2...1.3)
-
-* Add PHP_CodeSniffer.
-* Add WordPress Coding Standards for PHP_CodeSniffer.
-
-### 1.2
-
-<i class="fa fa-wrench"></i> [1.1...1.2](https://github.com/miya0001/vccw/compare/1.1...1.2)
-
-* Add Composer.
-* Setup the plugin unit tests suite automatically.
-
-### 1.1
-
-<i class="fa fa-wrench"></i> [1.0...1.1](https://github.com/miya0001/vccw/compare/1.0...1.1)
-
-* Add Grunt
-* Upgrade PHP5.3 to PHP5.4
-
-### 1.0
-
-* Add PHPUnit
-* Some fix
-
+[https://github.com/vccw-team/vccw/releases](https://github.com/vccw-team/vccw/releases)
 
 {{ site.scroll_to_top }}
