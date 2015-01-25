@@ -78,7 +78,7 @@ This tool installs a WordPress environment with these settings by default.
 Copy `provision/default.yml` to `site.yml` like following.
 
 ```
-$ cd provision/default.yml site.yml
+$ cp provision/default.yml site.yml
 ```
 
 Then edit the `site.yml` and run `vagrant up`.
