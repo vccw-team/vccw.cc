@@ -201,11 +201,10 @@ You can place shell scripts, so it will run at pre/post provisioning.
 
 set -ex
 
-cd /var/www/wordpress
-/usr/local/bin/wp db import /vagrant/import.sql
+/usr/local/bin/wp --path=/var/www/wordpress plugin install contact-form-7 --activate
 ```
 
-This example script will import `/vagrant/import.sql` to the MySQL database by WP-CLI.
+This example script will install and activate plugin "Contact Form 7" by WP-CLI.
 
 {{ site.scroll_to_top }}
 
