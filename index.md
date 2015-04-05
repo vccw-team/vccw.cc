@@ -37,7 +37,7 @@ VCCW includes customizable variables for setting the WordPress version (or beta 
 $ vagrant plugin install vagrant-hostsupdater
 ```
 
-Windows is not allow to change hosts-file. Please add 'wordpress.local 192.168.33.10' by yourself!
+Windows does not allow to change `hosts` files. Please add `wordpress.local 192.168.33.10` by yourself!
 
 ### 4. Please download <a class="latest-zipball">.zip</a> or <a class="latest-tarball">.tar.gz</a>.
 
