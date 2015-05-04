@@ -14,6 +14,31 @@ VCCW includes customizable variables for setting the WordPress version (or beta 
 
 <ul id="navmenu"></ul>
 
+## What's Installed
+
+* CentOS 6.5
+    * Subversion
+    * Git
+    * jq
+* WordPress latest
+    * WP-CLI
+    * WordPress i18n Tools
+    * WordPress Coding Standards for PHP_CodeSniffer
+* PHP 5.4
+    * PHPUnit
+    * Composer
+* MySQL 5.5
+* Apache 
+* Node.js
+    * grunt, grunt-cli, grunt-init
+    * gulp
+* Ruby 2.1
+    * Bundler
+    * Wordmove
+    * Sass
+
+<ul id="navmenu"></ul>
+
 ## Requires
 
 * Vagrant 1.5 or later
