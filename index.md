@@ -21,21 +21,21 @@ VCCW includes customizable variables for setting the WordPress version (or beta 
     * Git
     * jq
 * WordPress latest
-    * WP-CLI
-    * WordPress i18n Tools
-    * WordPress Coding Standards for PHP_CodeSniffer
+    * [WP-CLI](http://wp-cli.org/)
+    * [WordPress i18n Tools](https://codex.wordpress.org/I18n_for_WordPress_Developers)
+    * [WordPress Coding Standards for PHP_CodeSniffer](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards)
 * PHP 5.4
-    * PHPUnit
-    * Composer
+    * [PHPUnit](https://phpunit.de/)
+    * [Composer](https://getcomposer.org/)
 * MySQL 5.5
 * Apache 
 * Node.js
-    * grunt, grunt-cli, grunt-init
-    * gulp
+    * [grunt, grunt-cli, grunt-init](http://gruntjs.com/)
+    * [gulp](http://gulpjs.com/)
 * Ruby 2.1
-    * Bundler
-    * Wordmove
-    * Sass
+    * [Bundler](http://bundler.io/)
+    * [Wordmove](https://github.com/welaika/wordmove)
+    * [Sass](http://sass-lang.com/)
 
 <ul id="navmenu"></ul>
 
