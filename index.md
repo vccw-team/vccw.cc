@@ -100,6 +100,8 @@ This tool installs a WordPress environment with these settings by default.
 
 ## Customizing
 
+VCCW is configured for those developing WordPress plugins, themes or websites. It includes many customizable variables for setting the WordPress version (or beta release), language, hostname, subdirectory, admin credentials, default plugins, default theme, multisite, SSL and other options. These variables give you a lot of flexibility in tailoring your development environment to your specific needs.
+
 Copy `provision/default.yml` to `site.yml` like following.
 
 ```
@@ -120,93 +122,22 @@ plugins:
 
 Then just run `vagrant up`.
 
+### Global configuration
+
+VCCW has a series of global parameters which work with all virtual machines.
+
+They can be specified `~/.vccw/config.yml` like following.
+
+```
+memory: 1024
+cpus: 2
+lang: ja
+theme_unit_test: true
+```
+
 ### Customizable variables
 
 See [provision/default.yml](https://github.com/vccw-team/vccw/blob/master/provision/default.yml).
-
-```
-# encoding: utf-8
-# vim: ft=ruby expandtab shiftwidth=2 tabstop=2
-
-#
-# General Settings
-#
-wp_box: miya0001/vccw
-chef_cookbook_path: ./provision
-
-#
-# Network Settings
-#
-hostname: wordpress.local
-ip: 192.168.33.10
-
-#
-# WordPress Settings
-#
-version: latest
-lang: en_US
-title: Welcome to the VCCW
-multisite: false
-rewrite_structure: /archives/%post_id%
-
-#
-# WordPress Path
-#
-document_root: '/var/www/wordpress'
-wp_home: ''     # Path to the WP_HOME like "wp"
-wp_siteurl: ''  # Path to the WP_SITEURL like "wp"
-
-#
-# WordPress User
-#
-admin_user: admin
-admin_pass: admin
-
-#
-# WordPress Database
-#
-db_prefix: wp_
-db_host: localhost
-
-#
-# WordPress Default Plugins
-# Plugin's slug or url to the plugin's slug.
-#
-plugins:
-    - dynamic-hostname
-    - wp-total-hacks
-    - tinymce-templates
-
-#
-# WordPress Default Theme
-# Theme's slug or url to the theme's .zip.
-#
-theme: ''
-
-#
-# WordPress Options
-#
-options:
-    blogdescription: Hello VCCW.
-
-#
-# The values of wp-config.php
-#
-force_ssl_admin: false
-wp_debug: true
-savequeries: false
-
-#
-# Theme unit testing
-#
-theme_unit_test: false
-theme_unit_test_uri: https://wpcom-themes.svn.automattic.com/demo/theme-unit-test-data.xml
-
-#
-# DB will be reset when provision
-#
-reset_db_on_provision: true
-```
 
 {{ site.scroll_to_top }}
 
