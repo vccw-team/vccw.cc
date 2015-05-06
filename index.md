@@ -64,23 +64,29 @@ $ vagrant plugin install vagrant-hostsupdater
 
 Windows does not allow to change `hosts` files. Please add `wordpress.local 192.168.33.10` by yourself!
 
-### 4. Please download <a class="latest-zipball">.zip</a> or <a class="latest-tarball">.tar.gz</a>.
+### 4. Download vagrant box
+
+```
+$ vagrant box add miya0001/vccw
+```
+
+### 5. Please download <a class="latest-zipball">.zip</a> or <a class="latest-tarball">.tar.gz</a>.
 
 <p><a class="button latest-zipball"><small>Download</small>.zip</a></p>
 
-### 5. Change into a new directory.
+### 6. Change into a new directory.
 
 ```
 $ cd vccw-x.x.x
 ```
 
-### 6. Start a Vagrant environment.
+### 7. Start a Vagrant environment.
 
 ```
 $ vagrant up
 ```
 
-### 7. Visit WordPress on the Vagrant in your browser
+### 8. Visit WordPress on the Vagrant in your browser
 
 Visit [http://wordpress.local/](http://wordpress.local/) or [http://192.168.33.10/](http://192.168.33.10/)
 
