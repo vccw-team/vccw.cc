@@ -28,7 +28,7 @@ VCCW includes customizable variables for setting the WordPress version (or beta 
     * [PHPUnit](https://phpunit.de/)
     * [Composer](https://getcomposer.org/)
 * MySQL 5.5
-* Apache 
+* Apache
 * Node.js
     * [grunt, grunt-cli, grunt-init](http://gruntjs.com/)
     * [gulp](http://gulpjs.com/)
@@ -62,7 +62,7 @@ VCCW includes customizable variables for setting the WordPress version (or beta 
 $ vagrant plugin install vagrant-hostsupdater
 ```
 
-Windows does not allow to change `hosts` files. Please add `wordpress.local 192.168.33.10` by yourself!
+Windows does not allow to change `hosts` files. Please add `vccw.dev 192.168.33.10` by yourself!
 
 ### 4. Download vagrant box
 
@@ -88,7 +88,7 @@ $ vagrant up
 
 ### 8. Visit WordPress on the Vagrant in your browser
 
-Visit [http://wordpress.local/](http://wordpress.local/) or [http://192.168.33.10/](http://192.168.33.10/)
+Visit [http://vccw.dev/](http://vccw.dev/) or [http://192.168.33.10/](http://192.168.33.10/)
 
 {{ site.scroll_to_top }}
 
