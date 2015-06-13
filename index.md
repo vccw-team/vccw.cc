@@ -27,6 +27,8 @@ VCCW includes customizable variables for setting the WordPress version (or beta 
 * PHP 5.4
     * [PHPUnit](https://phpunit.de/)
     * [Composer](https://getcomposer.org/)
+    * [phpenv](https://github.com/CHH/phpenv)
+    * [php-build](https://github.com/php-build/php-build)
 * MySQL 5.5
 * Apache
 * Node.js
@@ -127,6 +129,18 @@ plugins:
 ```
 
 Then just run `vagrant up`.
+
+### Change PHP version
+
+Put php version to `site.yml` like following.
+
+```
+php_version: 2.6.9
+```
+
+Then run `vagrant up` or `vagrant provision`.
+
+See [https://github.com/php-build/php-build/tree/master/share/php-build/definitions](https://github.com/php-build/php-build/tree/master/share/php-build/definitions).
 
 ### Global configuration
 
