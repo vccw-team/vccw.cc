@@ -135,7 +135,7 @@ Then just run `vagrant up`.
 Put php version to `site.yml` like following.
 
 ```
-php_version: 2.6.9
+php_version: 5.6.9
 ```
 
 Then run `vagrant up` or `vagrant provision`.
