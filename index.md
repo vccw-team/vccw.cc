@@ -38,6 +38,7 @@ VCCW includes customizable variables for setting the WordPress version (or beta 
     * [Bundler](http://bundler.io/)
     * [Wordmove](https://github.com/welaika/wordmove)
     * [Sass](http://sass-lang.com/)
+    * [MailCatcher](http://mailcatcher.me/)
 
 <ul id="navmenu"></ul>
 
@@ -181,6 +182,24 @@ set -ex
 ```
 
 This example script will install and activate plugin "Contact Form 7" by WP-CLI.
+
+{{ site.scroll_to_top }}
+
+## Checking Email with MailCatcher
+
+[MailCathcer](http://mailcatcher.me/) re-routes all WordPress emails to Mailcatcher.
+
+### How to use
+
+Run following command.
+
+```
+$ curl -L https://raw.githubusercontent.com/vccw-team/activate-mailcatcher/master/setup.sh | bash
+```
+
+Then visit [http://vccw.dev:1080/](http://vccw.dev:1080/).
+
+![](https://www.evernote.com/l/ABUEyE7-DsdNU7Dt80RiWHxyRXyd_8JZ6zEB/image.png)
 
 {{ site.scroll_to_top }}
 
