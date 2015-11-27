@@ -105,6 +105,14 @@ This tool installs a WordPress environment with these settings by default.
      * Username: `admin`
      * Password: `admin`
 
+### Database
+
+* MySQL Host: `127.0.0.1`
+* Username: `wordpress`
+* Password: `wordpress`
+* Port: `3306`
+
+
 {{ site.scroll_to_top }}
 
 ## Customizing
