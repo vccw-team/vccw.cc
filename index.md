@@ -108,10 +108,16 @@ This tool installs a WordPress environment with these settings by default.
 ### Database
 
 * MySQL Host: `127.0.0.1`
-* Username: `wordpress`
+* Username: `wordpress` or `root`
 * Password: `wordpress`
 * Port: `3306`
 
+### SSH
+
+ * Host: 127.0.0.1
+ * Username: vagrant
+ * Password: vagrant
+ * Port: 2222
 
 {{ site.scroll_to_top }}
 
