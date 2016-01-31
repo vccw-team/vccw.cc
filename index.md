@@ -112,12 +112,14 @@ This tool installs a WordPress environment with these settings by default.
 * Password: `wordpress`
 * Port: `3306`
 
-### SSH
+### Default SSH
 
- * Host: 127.0.0.1
- * Username: vagrant
- * Password: vagrant
- * Port: 2222
+ * Host: `vccw.dev` or `192.168.33.10`
+ * Username: `vagrant`
+ * Password: `vagrant`
+ * Port: `2222`
+ 
+You can login virtual machine with `vagrant ssh`.
 
 {{ site.scroll_to_top }}
 
