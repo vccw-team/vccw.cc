@@ -117,7 +117,7 @@ This tool installs a WordPress environment with these settings by default.
  * Host: `vccw.dev` or `192.168.33.10`
  * Username: `vagrant`
  * Password: `vagrant`
- * Port: `2222`
+ * Port: `22`
  
 You can login virtual machine with `vagrant ssh`.
 
