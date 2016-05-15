@@ -29,6 +29,7 @@ VCCW includes customizable variables for setting the WordPress version (or beta 
     * [Composer](https://getcomposer.org/)
     * [phpenv](https://github.com/CHH/phpenv)
     * [php-build](https://github.com/php-build/php-build)
+    * [phpDocumentor](https://www.phpdoc.org/)
 * MySQL 5.5
 * Apache
 * Node.js
