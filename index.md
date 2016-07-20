@@ -204,7 +204,7 @@ This example script will install and activate plugin "Contact Form 7" by WP-CLI.
 
 ## Checking Email with MailCatcher
 
-[MailCathcer](http://mailcatcher.me/) re-routes all WordPress emails to Mailcatcher.
+[MailCatcher](http://mailcatcher.me/) re-routes all WordPress emails to Mailcatcher.
 
 ### How to use
 
