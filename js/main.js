@@ -41,10 +41,16 @@ function show_contributors(res) {
 }
 
 function set_link(res) {
-    var tag = res.data[0];
+    var release;
+    for ( var i = 0; i < res.data.length; i++ ) {
+        if ( res.data[i].tag_name.match(/^2\./) ) {
+            release = res.data[i];
+            break;
+        }
+    }
     var link = 'https://github.com/' + gh_user + '/' + gh_project + '/archive/';
-    $('.latest-zipball').attr('href', link + tag.name + '.zip');
-    $('.latest-tarball').attr('href', link + tag.name + '.tar.gz');
+    $('.latest-zipball').attr('href', link + release.name + '.zip');
+    $('.latest-tarball').attr('href', link + release.name + '.tar.gz');
 }
 
 function show_issues(res) {
