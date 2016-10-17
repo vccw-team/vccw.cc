@@ -49,8 +49,8 @@ function set_link(res) {
         }
     }
     var link = 'https://github.com/' + gh_user + '/' + gh_project + '/archive/';
-    $('.latest-zipball').attr('href', link + release.name + '.zip');
-    $('.latest-tarball').attr('href', link + release.name + '.tar.gz');
+    $('.latest-zipball').attr('href', link + release.tag_name + '.zip');
+    $('.latest-tarball').attr('href', link + release.tag_name + '.tar.gz');
 }
 
 function show_issues(res) {
