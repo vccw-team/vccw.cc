@@ -7,4 +7,4 @@ $ bundle install --path vendor/bundle
 $ bundle exec jekyll serve
 ```
 
-Then visit [127.0.0.1:4000](127.0.0.1:4000).
+Then visit [127.0.0.1:4000](http://127.0.0.1:4000/).
