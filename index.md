@@ -6,7 +6,11 @@ og_image: http://vccw.cc/images/ogp.png
 description: VCCW is a Vagrant based development environment for WordPress plugins, themes, or websites.
 ---
 
-# Vagrant + Chef + WordPress
+<div class="alert">
+<p>VCCW v3 is now avilable!<br>If you want to use VCCW v2, Please visit <a href="http://v2.vccw.cc/">v2.vccw.cc</a>.</p>
+</div>
+
+# Development environment for WordPress
 
 This is a [Vagrant](http://www.vagrantup.com/) configuration designed for development of WordPress plugins, themes, or websites.
 
@@ -16,37 +20,32 @@ VCCW includes customizable variables for setting the WordPress version (or beta 
 
 ## What's Installed
 
-* CentOS 6.5
+* Ubuntu 16.04 Xenial64
     * Subversion
     * Git
     * jq
-* WordPress latest
+* WP-CLI & WordPress
     * [WP-CLI](http://wp-cli.org/)
     * [WordPress i18n Tools](https://codex.wordpress.org/I18n_for_WordPress_Developers)
     * [WordPress Coding Standards for PHP_CodeSniffer](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards)
-* PHP 5.4
+* PHP 7
     * [PHPUnit](https://phpunit.de/)
     * [Composer](https://getcomposer.org/)
-    * [phpenv](https://github.com/CHH/phpenv)
-    * [php-build](https://github.com/php-build/php-build)
-    * [phpDocumentor](https://www.phpdoc.org/)
-* MySQL 5.5
-* Apache
-* Node.js
-    * [grunt, grunt-cli, grunt-init](http://gruntjs.com/)
+* MySQL 5.7.x
+* Apache 2.4.x
+* Node 6.6
     * [gulp](http://gulpjs.com/)
-* Ruby 2.1
+* Ruby 2.3
     * [Bundler](http://bundler.io/)
     * [Wordmove](https://github.com/welaika/wordmove)
-    * [Sass](http://sass-lang.com/)
     * [MailCatcher](http://mailcatcher.me/)
 
 <ul id="navmenu"></ul>
 
 ## Requires
 
-* Vagrant 1.5 or later
-* VirtualBox 4.3 or later
+* Vagrant 1.8.6 or later
+* VirtualBox 5.1.6 or later
 
 {{ site.scroll_to_top }}
 
@@ -66,12 +65,14 @@ VCCW includes customizable variables for setting the WordPress version (or beta 
 $ vagrant plugin install vagrant-hostsupdater
 ```
 
+#### Important!!
+
 Windows does not allow to change `hosts` files. Please add `vccw.dev 192.168.33.10` by yourself!
 
 ### 4. Download vagrant box
 
 ```
-$ vagrant box add miya0001/vccw
+$ vagrant box add vccw-team/xenial64
 ```
 
 ### 5. Please download <a class="latest-zipball">.zip</a> or <a class="latest-tarball">.tar.gz</a>.
@@ -106,20 +107,20 @@ This tool installs a WordPress environment with these settings by default.
      * Username: `admin`
      * Password: `admin`
 
-### Database
+### MySQL
 
 * MySQL Host: `127.0.0.1`
 * Username: `wordpress` or `root`
 * Password: `wordpress`
 * Port: `3306`
 
-### Default SSH
+### SSH
 
  * Host: `vccw.dev` or `192.168.33.10`
  * Username: `vagrant`
  * Password: `vagrant`
  * Port: `22`
- 
+
 You can login virtual machine with `vagrant ssh`.
 
 {{ site.scroll_to_top }}
@@ -140,25 +141,15 @@ Or place the `site.yml` and put variables like following.
 
 ```
 hostname: example.com
+ip: 192.168.33.11
 lang: ja
 plugins:
   - contact-form-7
   - jetpack
+theme: twentysixteen
 ```
 
 Then just run `vagrant up`.
-
-### Change PHP version
-
-Put php version to `site.yml` like following.
-
-```
-php_version: 5.6.9
-```
-
-Then run `vagrant up` or `vagrant provision`.
-
-See [https://github.com/php-build/php-build/tree/master/share/php-build/definitions](https://github.com/php-build/php-build/tree/master/share/php-build/definitions).
 
 ### Global configuration
 
@@ -200,25 +191,31 @@ set -ex
 
 This example script will install and activate plugin "Contact Form 7" by WP-CLI.
 
+### Customize with Ansible
+
+Also, you can use [Ansible](https://www.ansible.com/).
+
+`provision-post.yml` - It will run after provisioning.
+
+```
+- hosts: all
+  become: yes
+
+  tasks:
+
+  - name: Ensure nginx is installed
+    apt: pkg=nginx state=latest
+```
+
 {{ site.scroll_to_top }}
 
 ## Checking Email with MailCatcher
 
 [MailCathcer](http://mailcatcher.me/) re-routes all WordPress emails to Mailcatcher.
 
-### How to use
+Please visit: [http://vccw.dev:1080/](http://vccw.dev:1080/)
 
-Run following command.
-
-```
-$ curl -L https://raw.githubusercontent.com/vccw-team/activate-mailcatcher/master/setup.sh | bash
-```
-
-Then visit [http://vccw.dev:1080/](http://vccw.dev:1080/).
-
-![](https://www.evernote.com/l/ABUEyE7-DsdNU7Dt80RiWHxyRXyd_8JZ6zEB/image.png)
-
-{{ site.scroll_to_top }}
+![](https://www.evernote.com/l/ABUeagocd_ROirFcwYAQP_wOrmENf4VUWf4B/image.png)
 
 ## Changelog
 

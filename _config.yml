@@ -1,6 +1,6 @@
 name: VCCW - Vagrant based development environment for WordPress
 markdown: redcarpet
-pygments: true
+highlighter: true
 exclude: ["vendor", "Gemfile", "Gemfile.lock"]
 google_analytics:
     id: UA-1434500-34
@@ -13,3 +13,5 @@ header:
     description: Vagrant based development environment for WordPress plugins, themes, or websites.
 footer: Initial code by <a href="http://firegoby.jp/">Takayuki Miyauchi</a>.
 scroll_to_top: <p class="scroll-to-top"><a href="#top"><i class="fa fa-arrow-up"></i> Back to top</a></p>
+
+exclude: [vendor]
