@@ -33,8 +33,7 @@ VCCW includes customizable variables for setting the WordPress version (or beta 
     * [Composer](https://getcomposer.org/)
 * MySQL 5.7.x
 * Apache 2.4.x
-* Node 6.6
-    * [gulp](http://gulpjs.com/)
+* NodeJS latest
 * Ruby 2.3
     * [Bundler](http://bundler.io/)
     * [Wordmove](https://github.com/welaika/wordmove)
