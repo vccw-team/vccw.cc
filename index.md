@@ -31,6 +31,7 @@ VCCW includes customizable variables for setting the WordPress version (or beta 
 * PHP 7
     * [PHPUnit](https://phpunit.de/)
     * [Composer](https://getcomposer.org/)
+    * [PHP_CodeSniffer](https://github.com/squizlabs/PHP_CodeSniffer)
 * MySQL 5.7.x
 * Apache 2.4.x
 * NodeJS latest
