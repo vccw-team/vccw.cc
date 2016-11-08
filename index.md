@@ -7,7 +7,7 @@ description: VCCW is a Vagrant based development environment for WordPress plugi
 ---
 
 <div class="alert">
-<p>VCCW v3 is now avilable!<br>If you want to use VCCW v2, Please visit <a href="http://v2.vccw.cc/">v2.vccw.cc</a>.</p>
+<p>VCCW v3 is now available!<br>If you want to use VCCW v2, Please visit <a href="http://v2.vccw.cc/">v2.vccw.cc</a>.</p>
 </div>
 
 # Development environment for WordPress
