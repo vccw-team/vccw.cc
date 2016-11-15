@@ -231,8 +231,6 @@ $ wp package install vccw/scaffold-vccw:@stable
 
 Generate a VCCW environment into the `wp.dev` directory.
 
-
-Example:
 ```
 $ wp scaffold vccw wp.dev
 Generating:   100% [===========================] 0:03 / 0:06
@@ -240,8 +238,6 @@ Success: Generated.
 $ cd wp.dev
 $ vagrant up
 ```
-
-You can see:
 
 ### Usage
 
