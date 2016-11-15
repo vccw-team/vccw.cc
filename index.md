@@ -217,6 +217,74 @@ Please visit: [http://vccw.dev:1080/](http://vccw.dev:1080/)
 
 ![](https://www.evernote.com/l/ABUeagocd_ROirFcwYAQP_wOrmENf4VUWf4B/image.png)
 
+## WP-CLI
+
+We developed a community command that generates a VCCW environment.
+
+### How to install
+
+```
+$ wp package install vccw/scaffold-vccw:@stable
+```
+
+### How to use
+
+Generate a VCCW environment into the `wp.dev` directory.
+
+
+Example:
+```
+$ wp scaffold vccw wp.dev
+Generating:   100% [===========================] 0:03 / 0:06
+Success: Generated.
+$ cd wp.dev
+$ vagrant up
+```
+
+You can see:
+
+### Usage
+
+```
+$ wp help scaffold vccw
+NAME
+
+  wp scaffold vccw
+
+DESCRIPTION
+
+  Generate a new VCCW environment.
+
+SYNOPSIS
+
+  wp scaffold vccw <directory> [--host=<hostname>] [--ip=<ip-address>]
+  [--lang=<language>]
+
+OPTIONS
+
+  <directory>
+    The directory of the new VCCW based guest machine.
+
+  [--host=<hostname>]
+    Hostname of the guest machine. Default is `vccw.dev`.
+
+  [--ip=<ip-address>]
+    IP address of the guest machine. Default is `192.168.33.10`.
+
+  [--lang=<language>]
+    Language of the WordPress. Default is `en_US`.
+
+EXAMPLES
+
+    $ wp scaffold vccw wordpress.dev
+    Generating:   100% [===========================] 0:03 / 0:06
+    Success: Generated.
+
+    $ wp scaffold vccw wordpress.dev --lang=ja
+    Generating:   100% [===========================] 0:03 / 0:06
+    Success: Generated.
+```
+
 ## Changelog
 
 [https://github.com/vccw-team/vccw/releases](https://github.com/vccw-team/vccw/releases)
