@@ -221,6 +221,8 @@ Please visit: [http://vccw.dev:1080/](http://vccw.dev:1080/)
 
 We developed a community command that generates a VCCW environment.
 
+[https://github.com/vccw-team/scaffold-vccw](https://github.com/vccw-team/scaffold-vccw)
+
 ### How to install
 
 ```
