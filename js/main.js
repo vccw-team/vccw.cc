@@ -41,9 +41,7 @@ function show_contributors(res) {
 }
 
 function set_link(res) {
-    var link = 'https://github.com/' + gh_user + '/' + gh_project + '/archive/';
-    $('.latest-zipball').attr('href', link + res.data.tag_name + '.zip');
-    $('.latest-tarball').attr('href', link + res.data.tag_name + '.tar.gz');
+    $('.latest-zipball').attr('href', res.data.assets[0].browser_download_url);
 }
 
 function show_issues(res) {

@@ -75,7 +75,7 @@ Windows does not allow to change `hosts` files. Please add `vccw.dev 192.168.33.
 $ vagrant box add vccw-team/xenial64
 ```
 
-### 5. Please download <a class="latest-zipball">.zip</a> or <a class="latest-tarball">.tar.gz</a>.
+### 5. Please download <a class="latest-zipball">.zip</a>.
 
 <p><a class="button latest-zipball"><small>Download</small>.zip</a></p>
 
