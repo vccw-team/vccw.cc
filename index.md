@@ -207,7 +207,7 @@ Also, you can use [Ansible](https://www.ansible.com/).
 
 ## Checking Email with MailCatcher
 
-[MailCathcer](http://mailcatcher.me/) re-routes all WordPress emails to Mailcatcher.
+[MailCatcher](http://mailcatcher.me/) re-routes all WordPress emails to Mailcatcher.
 
 Please visit: [http://vccw.dev:1080/](http://vccw.dev:1080/)
 
