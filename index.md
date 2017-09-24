@@ -63,7 +63,7 @@ $ vagrant plugin install vagrant-hostsupdater
 
 #### Important!!
 
-Windows does not allow to change `hosts` files. Please add `vccw.dev 192.168.33.10` by yourself!
+Windows does not allow to change `hosts` files. Please add `vccw.test 192.168.33.10` by yourself!
 
 ### 4. Download vagrant box
 
@@ -89,7 +89,7 @@ $ vagrant up
 
 ### 8. Visit WordPress on the Vagrant in your browser
 
-Visit [http://vccw.dev/](http://vccw.dev/) or [http://192.168.33.10/](http://192.168.33.10/)
+Visit [http://vccw.test/](http://vccw.test/) or [http://192.168.33.10/](http://192.168.33.10/)
 
 {{ site.scroll_to_top }}
 
@@ -112,7 +112,7 @@ This tool installs a WordPress environment with these settings by default.
 
 ### SSH
 
- * Host: `vccw.dev` or `192.168.33.10`
+ * Host: `vccw.test` or `192.168.33.10`
  * Username: `vagrant`
  * Password: `vagrant`
  * Port: `22`
@@ -209,7 +209,7 @@ Also, you can use [Ansible](https://www.ansible.com/).
 
 [MailCatcher](http://mailcatcher.me/) re-routes all WordPress emails to Mailcatcher.
 
-Please visit: [http://vccw.dev:1080/](http://vccw.dev:1080/)
+Please visit: [http://vccw.test:1080/](http://vccw.test:1080/)
 
 ![](https://www.evernote.com/l/ABUeagocd_ROirFcwYAQP_wOrmENf4VUWf4B/image.png)
 
@@ -260,7 +260,7 @@ OPTIONS
     The directory of the new VCCW based guest machine.
 
   [--host=<hostname>]
-    Hostname of the guest machine. Default is `vccw.dev`.
+    Hostname of the guest machine. Default is `vccw.test`.
 
   [--ip=<ip-address>]
     IP address of the guest machine. Default is `192.168.33.10`.
